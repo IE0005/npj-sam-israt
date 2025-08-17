@@ -159,7 +159,8 @@ GT/
    ```  
    
  ## Outputs
-    ```bash
+ 
+   ```bash
 pred_mask_final_seg/
 └── cluster_1/                             # Final predicted binary masks
     ├── image_1.png
