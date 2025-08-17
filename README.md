@@ -142,7 +142,7 @@ CSV/
 
    ```
    
- ##Inputs 
+ ## Inputs 
  
    ```bash
  cluster_image_folder/
