@@ -91,6 +91,7 @@ threshold_output_folder/       # Thresholded grayscale versions of centroid imag
    ```
 
 ## Inputs 
+   ```bash
 centers/
 └── thresholded_centroid_cluster_1.png     # Representative Centroid Image of the cluster
 
@@ -115,7 +116,7 @@ pred_mask_final_seg/
 CSV/
 ├── mask_scores.csv                        # Mask index + score for each image
 └── dice_scores.csv                        # Dice coefficient evaluation results
-
+ ```
 3. **Generate prompts from pseudo ground truth**
 
    ```bash
@@ -139,6 +140,7 @@ CSV/
    ```
    
  ##Inputs 
+    ```bash
  cluster_image_folder/
 └── cluster_1/                             # Cluster of images to be segmented
     ├── image_1.tif
@@ -150,8 +152,9 @@ GT/
     ├── GT_image_1.png
     ├── GT_image_2.png
     ├── ...
-    
+   ```  
  ## Outputs
+    ```bash
 pred_mask_final_seg/
 └── cluster_1/                             # Final predicted binary masks
     ├── image_1.png
@@ -162,7 +165,7 @@ CSV/
 ├── mask_scores.csv                        # Mask index + score for each image
 └── dice_scores.csv                        # Dice coefficient evaluation results
 
-
+ ```
 > ⚠️ Make sure to configure file paths or parameters in each script based on your data location and clustering setup.
 
 
