@@ -162,6 +162,15 @@ CSV/
 ├── mask_scores.csv                        # Mask index + score for each image
 └── dice_scores.csv                        # Dice coefficient evaluation results
 
+RootFolder/
+├── SubFolder1/
+│   ├── file1.txt
+│   ├── file2.txt
+│   └── NestedSubFolder/
+│       └── nested_file.txt
+├── SubFolder2/
+│   └── file3.png
+└── file4.md
 > ⚠️ Make sure to configure file paths or parameters in each script based on your data location and clustering setup.
 
 
