@@ -41,6 +41,32 @@ This repository contains code for the [An unsupervised approach towards promptab
       --num_images 50 \
       --n_clusters 3
    ```
+## Outputs 
+
+Clustered_tiff_images/ (per sample)
+├── cluster_1/
+│   ├── image1.tif
+│   ├── image2.tif
+│   └── ...
+├── cluster_2/
+│   ├── image3.tif
+│   ├── image4.tif
+│   └── ...
+└── cluster_N/
+    └── ...
+
+centroid_folder/               # Centroid (medoid) images saved as PNG
+├── medoid_cluster_1.png
+├── medoid_cluster_2.png
+└── ...
+
+threshold_output_folder/       # Thresholded grayscale versions of centroid images
+├── thresholded_medoid_cluster_1.png
+├── thresholded_medoid_cluster_2.png
+└── ...
+
+
+
 
 2. **Generate prompts and run SAM on clustered data (to generate masks)**
 
@@ -64,6 +90,32 @@ This repository contains code for the [An unsupervised approach towards promptab
       --create_images_dir
    ```
 
+## Inputs 
+centers/
+└── thresholded_centroid_cluster_1.png     # Representative Centroid Image of the cluster
+
+cluster_image_folder/
+└── cluster_1/                             # Cluster of images to be segmented
+    ├── image_1.tif
+    ├── image_2.tif
+    ├── ...
+
+GT/
+└── cluster_1/                             # Ground-truth masks (for evaluation)
+    ├── GT_image_1.png
+    ├── GT_image_2.png
+    ├── ...
+## Outputs
+pred_mask_final_seg/
+└── cluster_1/                             # Final predicted binary masks
+    ├── image_1.png
+    ├── image_2.png
+    ├── ...
+
+CSV/
+├── mask_scores.csv                        # Mask index + score for each image
+└── dice_scores.csv                        # Dice coefficient evaluation results
+
 3. **Generate prompts from pseudo ground truth**
 
    ```bash
@@ -85,6 +137,31 @@ This repository contains code for the [An unsupervised approach towards promptab
       --create_images_dir
 
    ```
+   
+ ##Inputs 
+ cluster_image_folder/
+└── cluster_1/                             # Cluster of images to be segmented
+    ├── image_1.tif
+    ├── image_2.tif
+    ├── ...
+
+GT/
+└── cluster_1/                             # Ground-truth masks (for evaluation)
+    ├── GT_image_1.png
+    ├── GT_image_2.png
+    ├── ...
+    
+ ## Outputs
+pred_mask_final_seg/
+└── cluster_1/                             # Final predicted binary masks
+    ├── image_1.png
+    ├── image_2.png
+    ├── ...
+
+CSV/
+├── mask_scores.csv                        # Mask index + score for each image
+└── dice_scores.csv                        # Dice coefficient evaluation results
+
 > ⚠️ Make sure to configure file paths or parameters in each script based on your data location and clustering setup.
 
 
