@@ -88,11 +88,11 @@ This repository contains code for the [An unsupervised approach towards promptab
 > ⚠️ Make sure to configure file paths or parameters in each script based on your data location and clustering setup.
 
 
-##Core requirements
+## Core requirements
 ```bash
     pip install torch numpy opencv-python scikit-learn matplotlib scikit-image pillow
  ```
-##SAM installation 
+## SAM installation 
 ```bash
     pip install git+https://github.com/facebookresearch/segment-anything.git
  ```
