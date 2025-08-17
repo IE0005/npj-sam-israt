@@ -42,7 +42,7 @@ This repository contains code for the [An unsupervised approach towards promptab
       --n_clusters 3
    ```
 ## Outputs 
-
+   ```bash
 Clustered_tiff_images/ (per sample)
 ├── cluster_1/
 │   ├── image1.tif
@@ -64,7 +64,7 @@ threshold_output_folder/       # Thresholded grayscale versions of centroid imag
 ├── thresholded_medoid_cluster_1.png
 ├── thresholded_medoid_cluster_2.png
 └── ...
-
+ ```
 
 
 
@@ -162,15 +162,7 @@ CSV/
 ├── mask_scores.csv                        # Mask index + score for each image
 └── dice_scores.csv                        # Dice coefficient evaluation results
 
-RootFolder/
-├── SubFolder1/
-│   ├── file1.txt
-│   ├── file2.txt
-│   └── NestedSubFolder/
-│       └── nested_file.txt
-├── SubFolder2/
-│   └── file3.png
-└── file4.md
+
 > ⚠️ Make sure to configure file paths or parameters in each script based on your data location and clustering setup.
 
 
